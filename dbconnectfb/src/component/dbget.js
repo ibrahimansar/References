@@ -25,12 +25,12 @@ class Dbget extends Component {
     render() {
         return (
             <div>
-                {this.state.users.map((user) => {
+                {this.state.users.map((user) => (
                     <Dbdata 
                     key={user.id}
                     name={user.name}
                     roll={user.roll} />                                     
-                })}
+        ))}
             </div>
         )
     }
