@@ -1,8 +1,10 @@
-const express = request('express');
+const express = require('express');
 const bodyparser = require('body-parser');
+
+const placesRoutes = require('./routes/places-routes');
 
 const app = express();
 
+app.use(placesRoutes);
 
-
-app.linsten(5000);
+app.listen(5000);
