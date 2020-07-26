@@ -1,10 +1,16 @@
 const express = require('express');
 
+const placesControllers = require('../controllers/places-controller');
+
+const HttpError = require('../models/http-error');
+
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    console.log(' GET Request in places');
-    res.json({message: 'it works'});
-});
+router.get('/:pid', placesControllers.getPlaceById);
+
+router.get('/user/:uid', placesControllers.getPlaceByUserId);
+
+router.post('/', placesControllers.createPlace)
+
 
 module.exports = router;
