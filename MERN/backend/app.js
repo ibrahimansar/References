@@ -27,7 +27,7 @@ app.use((error, req, res, next) => {
 });
 
 
-mongoose.connect('mongodb+srv://ans:123@cluster0.xxfni.mongodb.net/places?retryWrites=true&w=majority', { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://ans:123@cluster0.xxfni.mongodb.net/places?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(()=> {    
    app.listen(5000);
   })
