@@ -49,7 +49,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    'mongodb+srv://ans:123@cluster0.xxfni.mongodb.net/places?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }
+    'mongodb+srv://ans:123@cluster0.xxfni.mongodb.net/places?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true}
   )
   .then(() => {
     app.listen(5000);
@@ -57,6 +57,7 @@ mongoose
   .catch(err => {
     console.log(err);
   });
+
 
 
 
